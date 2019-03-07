@@ -1,5 +1,5 @@
 
-public class PriorityQueueHospital extends Hospital{
+public class PriorityQueueHospital<PatientType> extends Hospital{
 
 	public PriorityQueueHospital()
 	{

@@ -1,8 +1,19 @@
 
 public class SickPerson extends Person {
 
-	public SickPerson(String name, int age) {
+	private int severity;
+	/**
+	 * @return the severity
+	 */
+	public int getSeverity() 
+	{
+		return severity;
+	}
+
+	public SickPerson(String name, int age, int severity) 
+	{
 		super(name, age);
+		this.severity=severity;
 		// TODO Auto-generated constructor stub
 	}
 

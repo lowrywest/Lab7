@@ -1,6 +1,8 @@
+import java.util.Stack;
 
 public class StackHospital<PatientType> extends Hospital {
 	
+	 private Stack<PatientType> stackHospital= new Stack<>();
 	public StackHospital()
 	{
 		
@@ -9,6 +11,7 @@ public class StackHospital<PatientType> extends Hospital {
 	@Override
 	public void addPatient(Object patient) {
 		// TODO Auto-generated method stub
+		stackHospital.push((PatientType) patient);
 		
 	}
 

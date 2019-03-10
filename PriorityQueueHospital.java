@@ -1,14 +1,16 @@
+import java.util.LinkedList;
+import java.util.PriorityQueue;
 
 public class PriorityQueueHospital<PatientType> extends Hospital{
 
+	private PriorityQueue<PatientType> priorityHospital;
 	public PriorityQueueHospital()
-	{
-		
+	{	
 	}
 	@Override
 	public void addPatient(Object patient) {
 		// TODO Auto-generated method stub
-		
+		priorityHospital.add((PatientType) patient);
 	}
 
 	@Override

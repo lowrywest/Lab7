@@ -16,19 +16,23 @@ public class StackHospital<PatientType> extends Hospital {
 	}
 
 	@Override
-	public Object nextPatient() {
+	public Object nextPatient() 
+	{
 		// TODO Auto-generated method stub
-		return null;
+		return stackHospital.peek();
 	}
 
 	@Override
-	public Object treatNextPatient() {
+	public Object treatNextPatient() 
+	{
+		
 		// TODO Auto-generated method stub
-		return null;
+		return stackHospital.pop();
 	}
 
 	@Override
-	public int numPatients() {
+	public int numPatients() 
+	{
 		// TODO Auto-generated method stub
 		return 0;
 	}
@@ -40,7 +44,8 @@ public class StackHospital<PatientType> extends Hospital {
 	}
 
 	@Override
-	public String allPatientInfo() {
+	public String allPatientInfo() 
+	{
 		// TODO Auto-generated method stub
 		return null;
 	}

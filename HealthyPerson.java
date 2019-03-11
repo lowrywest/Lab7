@@ -17,10 +17,23 @@ public class HealthyPerson extends Person {
 	{
 		return reason;
 	}
+	
 	@Override
-	protected int compareToImpl(Person p) {
-		// TODO Auto-generated method stub
-		return 0;
+	protected int compareToImpl(Person p) 
+	{
+		if(!p.toString().equalsIgnoreCase(this.toString()))
+		{
+			return 0;
+		}
+		else
+		{
+			return this.getName().compareTo(p.getName());
+		}
+	}
+	
+	public String toString()
+	{
+		return String.format("%s In for %s", super.toString(),reason);
 	}
 
 }

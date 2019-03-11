@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class QueueHospital<PatientType> extends Hospital {
+public class QueueHospital<PatientType> extends Hospital<PatientType> {
 
 	private Queue<PatientType> hospitalQueue=new LinkedList<PatientType>();
 	public QueueHospital()
@@ -9,21 +9,21 @@ public class QueueHospital<PatientType> extends Hospital {
 		
 	}
 	@Override
-	public void addPatient(Object patient) {
+	public void addPatient(PatientType patient) {
 		// TODO Auto-generated method stub
-		hospitalQueue.add((PatientType) patient);
+		hospitalQueue.add( patient);
 		
 	}
 
 	@Override
-	public Object nextPatient() 
+	public PatientType nextPatient() 
 	{
 		// TODO Auto-generated method stub
 		return hospitalQueue.peek();
 	}
 
 	@Override
-	public Object treatNextPatient() 
+	public PatientType treatNextPatient() 
 	{
 		// TODO Auto-generated method stub
 		return hospitalQueue.poll();

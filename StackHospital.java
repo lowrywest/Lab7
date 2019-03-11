@@ -1,32 +1,29 @@
 import java.util.Stack;
 
-public class StackHospital<PatientType> extends Hospital {
+public class StackHospital<PatientType> extends Hospital<PatientType> {
 	
-	 private Stack<PatientType> stackHospital= new Stack<>();
+	 private Stack<PatientType> stackHospital= new Stack<PatientType>();
 	public StackHospital()
 	{
 		
 	}
 
-	@SuppressWarnings("unchecked")
-	@Override
-	public void addPatient(Object patient) {
+	public void addPatient(PatientType patient) 
+	{
 		// TODO Auto-generated method stub
-		stackHospital.push((PatientType) patient);
+		stackHospital.push( patient);
 		
 	}
 
-	@Override
-	public Object nextPatient() 
+	public PatientType nextPatient() 
 	{
 		// TODO Auto-generated method stub
 		return stackHospital.peek();
 	}
 
 	@Override
-	public Object treatNextPatient() 
+	public PatientType treatNextPatient() 
 	{
-		
 		// TODO Auto-generated method stub
 		return stackHospital.pop();
 	}

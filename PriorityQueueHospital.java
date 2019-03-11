@@ -1,48 +1,45 @@
-import java.util.LinkedList;
 import java.util.PriorityQueue;
 
-public class PriorityQueueHospital<PatientType> extends Hospital{
-
-	private PriorityQueue<PatientType> priorityHospital;
+public class PriorityQueueHospital<PatientType> extends Hospital<PatientType>
+ {
+	
+	private PriorityQueue<PatientType> priorityHospital= new PriorityQueue<PatientType>();
+	
 	public PriorityQueueHospital()
 	{	
+		
 	}
-	@Override
-	public void addPatient(Object patient) 
+	
+	public void addPatient(PatientType patient) 
 	{
 		// TODO Auto-generated method stub
-		priorityHospital.add((PatientType) patient);
+		priorityHospital.add( patient);
 	}
 
-	@Override
-	public Object nextPatient() 
+	public PatientType nextPatient() 
 	{
 		// TODO Auto-generated method stub
 		return priorityHospital.peek();
 	}
 
-	@Override
-	public Object treatNextPatient() 
+	public PatientType treatNextPatient() 
 	{
 		return priorityHospital.poll();
 		// TODO Auto-generated method stub
 	}
 
-	@Override
 	public int numPatients() 
 	{
 		// TODO Auto-generated method stub
 		return priorityHospital.size();
 	}
 
-	@Override
 	public String hospitalType() 
 	{
 		// TODO Auto-generated method stub
 		return "PriorityQueueHospital";
 	}
 
-	@Override
 	public String allPatientInfo() 
 	{
 		String temp="";

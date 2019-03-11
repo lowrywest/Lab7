@@ -1,5 +1,6 @@
 
-public class SickPerson extends Person {
+public class SickPerson extends Person
+{
 
 	private int severity;
 	

@@ -8,39 +8,50 @@ public class PriorityQueueHospital<PatientType> extends Hospital{
 	{	
 	}
 	@Override
-	public void addPatient(Object patient) {
+	public void addPatient(Object patient) 
+	{
 		// TODO Auto-generated method stub
 		priorityHospital.add((PatientType) patient);
 	}
 
 	@Override
-	public Object nextPatient() {
+	public Object nextPatient() 
+	{
 		// TODO Auto-generated method stub
-		return null;
+		return priorityHospital.peek();
 	}
 
 	@Override
-	public Object treatNextPatient() {
+	public Object treatNextPatient() 
+	{
+		return priorityHospital.poll();
 		// TODO Auto-generated method stub
-		return null;
 	}
 
 	@Override
-	public int numPatients() {
+	public int numPatients() 
+	{
 		// TODO Auto-generated method stub
-		return 0;
+		return priorityHospital.size();
 	}
 
 	@Override
-	public String hospitalType() {
+	public String hospitalType() 
+	{
 		// TODO Auto-generated method stub
-		return null;
+		return "PriorityQueueHospital";
 	}
 
 	@Override
-	public String allPatientInfo() {
+	public String allPatientInfo() 
+	{
+		String temp="";
+		for(int i=0; i<numPatients(); i++)
+		{
+			temp+= priorityHospital.remove().toString();
+		}
 		// TODO Auto-generated method stub
-		return null;
+		return temp;
 	}
 
 }

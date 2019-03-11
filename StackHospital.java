@@ -8,6 +8,7 @@ public class StackHospital<PatientType> extends Hospital {
 		
 	}
 
+	@SuppressWarnings("unchecked")
 	@Override
 	public void addPatient(Object patient) {
 		// TODO Auto-generated method stub
@@ -34,20 +35,25 @@ public class StackHospital<PatientType> extends Hospital {
 	public int numPatients() 
 	{
 		// TODO Auto-generated method stub
-		return 0;
+		return stackHospital.size();
 	}
 
 	@Override
 	public String hospitalType() {
 		// TODO Auto-generated method stub
-		return null;
+		return "StackHospital";
 	}
 
 	@Override
 	public String allPatientInfo() 
 	{
+		String temp="";
+		for(int i=0; i<numPatients(); i++)
+		{
+			temp+= stackHospital.get(i).toString();
+		}
 		// TODO Auto-generated method stub
-		return null;
+		return temp;
 	}
 
 }
